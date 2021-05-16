@@ -1,6 +1,6 @@
 import "./App.css";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   useParams,
@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="https://xdinuka.github.io/Countdown/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="https://xdinuka.github.io/Countdown/to/:to" children={<CounterPage />} />
+        <Route path="/:to" children={<CounterPage />} />
       </Switch>
     </Router>
   );
@@ -39,7 +39,7 @@ function Home() {
     event.preventDefault();
     const date = new Date(`${dateState},${timeState}`);
     const time = date.getTime();
-    history.push(`https://xdinuka.github.io/Countdown/to/${time}`);
+    history.push(`/${time}`);
   };
 
   return (
