@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Countdown/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/Countdown/static/js/main.315265ce.chunk.js",
-    "main.js.map": "/Countdown/static/js/main.315265ce.chunk.js.map",
+    "main.js": "/Countdown/static/js/main.f6055869.chunk.js",
+    "main.js.map": "/Countdown/static/js/main.f6055869.chunk.js.map",
     "runtime-main.js": "/Countdown/static/js/runtime-main.3d56b5c5.js",
     "runtime-main.js.map": "/Countdown/static/js/runtime-main.3d56b5c5.js.map",
     "static/js/2.841d9845.chunk.js": "/Countdown/static/js/2.841d9845.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3d56b5c5.js",
     "static/js/2.841d9845.chunk.js",
     "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.315265ce.chunk.js"
+    "static/js/main.f6055869.chunk.js"
   ]
 }
