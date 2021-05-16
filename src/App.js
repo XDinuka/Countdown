@@ -12,16 +12,17 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route path="https://xdinuka.github.io/Countdown/">
           <Home />
         </Route>
-        <Route path="/:to" children={<CounterPage />} />
+        <Route path="https://xdinuka.github.io/Countdown/to/:to" children={<CounterPage />} />
       </Switch>
     </Router>
   );
 }
 
 function Home() {
+  console.log('Home')
   const history = useHistory();
   const [dateState, setDateState] = useState(null);
   const [timeState, setTimeState] = useState(null);
@@ -38,7 +39,7 @@ function Home() {
     event.preventDefault();
     const date = new Date(`${dateState},${timeState}`);
     const time = date.getTime();
-    history.push(`/${time}`);
+    history.push(`https://xdinuka.github.io/Countdown/to/${time}`);
   };
 
   return (
@@ -68,7 +69,7 @@ function Home() {
   );
 }
 
-function CounterPage() {
+function CounterPage() { console.log('CounterPage')
   const { to } = useParams();
   const dateto = new Date(Number.parseInt(to));
 
@@ -90,7 +91,7 @@ function CounterPage() {
   return <Counter count={betweenState} />;
 }
 
-function Counter(props) {
+function Counter(props) {console.log('Counter')
   const days = Math.floor(props.count / (1000 * 60 * 60 * 24));
   const hours = Math.floor(props.count / (1000 * 60 * 60)) - days * 24;
   const mins = Math.floor(props.count / (1000 * 60)) - (hours + days * 24) * 60;
