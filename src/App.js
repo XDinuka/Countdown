@@ -45,26 +45,26 @@ function Home() {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Date:
+        Select Date
+        </label>
         <input
           type="date"
           name="todate"
           required={true}
           onChange={handleDateChange}
         />
-      </label>
-      <br />
+
       <label>
-        Time:
+        Select Time
+        </label>
         <input
           type="time"
           name="totime"
           required={true}
           onChange={handleTimeChange}
         />
-      </label>
-      <br />
-      <input type="submit" value="Start Countdown" />
+
+      <button type="submit" >Start Countdown</button>
     </form>
   );
 }
@@ -85,7 +85,7 @@ function CounterPage() { console.log('CounterPage')
   });
 
   if (betweenState < 1) {
-    return <span>Countdown expired</span>;
+    return <span className="centered">Countdown Has Expired!</span>;
   }
 
   return <Counter count={betweenState} />;
@@ -98,17 +98,13 @@ function Counter(props) {console.log('Counter')
   const secs = Math.floor(props.count / 1000) - (mins + (hours + days * 24) * 60) * 60;
   const mils = Math.floor(props.count) - (secs + (mins + (hours + days * 24) * 60) * 60) * 1000;
   return (
-    <React.Fragment>
-      <span>days {days}</span>
-      <br />
-      <span>hours {hours}</span>
-      <br />
-      <span>mins {mins}</span>
-      <br />
-      <span>secs {secs}</span>
-      <br />
-      <span>mils {mils}</span>
-    </React.Fragment>
+    <div className="counter">
+      <span>{days}</span><span>Days</span>
+      <span>{hours}</span><span>Hours</span>
+      <span>{mins}</span><span>Minutes</span>
+      <span>{secs}</span><span>Seconds</span>
+      <span>{mils}</span><span>Miliseconds</span>
+    </div>
   );
 }
 
