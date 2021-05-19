@@ -31,6 +31,7 @@ button{
   padding: 1rem;
   font-size: 2rem;
   color: white;
+  cursor: pointer;
 }
 
 div.counter{
